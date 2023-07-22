@@ -41,6 +41,7 @@ section.alternate-background {
 .item {
   flex: 1;
   margin: 10px;
+  flex-direction: column;
 }
 img{
   width: 100%;
