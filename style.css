@@ -3,13 +3,12 @@
 body {
   font-family: "Lato", sans-serif;
   color: #6b1a22;
+  margin: 0;
 }
 
 h2 {
   font-size: 26px;
   font-weight: 400;
-  margin: 0 10px 15px 10px;
-  text-align: center;
 }
 
 h3 {
@@ -31,24 +30,20 @@ section.alternate-background {
   color: #ecdbc9;
 }
 
-main img {
-  width: 100px;
-}
-
 /* ---  Groups & Items --- */
 
 .group {
   display: flex;
   flex-direction: column;
+  align-content: center;
 }
 
 .item {
   flex: 1;
   margin: 10px;
 }
-
-.item-double {
-  flex: 2;
+img{
+  width: 100%;
 }
 
 /* -------  Navigation ------- */
@@ -65,8 +60,16 @@ header {
   color: #ecdbc9;
 }
 
-header nav ul li {
+header nav ul{
+  display: flex;
+  padding-left: 0;
+  list-style: none;
   list-style-type: none;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
 }
 
 header nav ul li a {
@@ -75,23 +78,36 @@ header nav ul li a {
   padding: 0 20px 0 0;
 }
 
-header nav ul li a:hover {
-  color: #bdbdbd;
-  text-decoration: none;
+header nav ul li:last-child a {
+  padding-right: 0;
 }
 
 /* -------  Join Form ------- */
+.form-group{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
 form {
   border: 2px solid #6b1a22;
   padding: 10px;
 }
+.form-row{
+  display: flex;
+  justify-content: space-between;
+}
 
 form label {
+  display: flex;
   font-weight: bold;
+  text-align: center;
 }
 
 form select,
 form input {
+  display: flex;
   margin-bottom: 20px;
   width: 180px;
 }
@@ -103,6 +119,30 @@ form button {
   font-size: 24px;
   padding: 15px;
   width: 100%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+}
+h1 {
+  white-space: nowrap;
+  text-align: right;
+}
+
+#join{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+/*--------  About -------- */
+img {
+  max-width: 100%;
+  min-width: 300px;
+  height: auto;
 }
 
 /* -------  Footer ------- */
@@ -118,3 +158,62 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 480px) {
+  header {
+    /* Changes the default setting from `block` to `flex`. */
+    display: flex;
+    /* Pushes the items (the title and nav) to the far sides of the 
+       browser with space between them. */
+    justify-content: space-between;
+    /* Adds 0 pixels padding top and bottom, and 30 pixels padding 
+       left and right. */
+    padding: 0 30px;
+  }
+
+  .logo {
+    font-family: "Tangerine", cursive;
+    font-size: 52px;
+    color: #ecdbc9;
+  }
+
+  header h1 {
+    /* Sets 14 pixels of margin above and below the `h1` and sets 
+        0 pixels of margin to the left and right. */
+    margin: 14px 0;
+    /* Removes or sets 0 pixels of padding above the `h1`. */
+    padding-top: 0;
+  }
+
+  header nav {
+    /*
+      Pushes the navigation container down by 8 pixels to make it
+      present a little better visually within the space.
+    */
+    margin-top: 8px;
+  }
+  /* Users cannot hover on mobile devices, so that is why you
+     implement this behavior only for larger screens. */
+  header nav ul li a:hover {
+    /* Targets the change when a user holds the pointer over the anchor tag 
+       (link) within the list items within the unordered list that 
+       is within the navigation that is within the header. */
+    color: #bdbdbd;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .item-double {
+    flex: 2;
+  }
+}
