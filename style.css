@@ -160,7 +160,7 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 480px) {
+@media screen and (min-width: 480px) {
   header {
     /* Changes the default setting from `block` to `flex`. */
     display: flex;
@@ -212,9 +212,10 @@ footer p {
     flex: 2;
   }
 }
-@media all and(min-width: 480px) and (max-width: 774px){
+@media screen and(min-width: 480px) and (max-width: 774px){
   .group {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
+}
