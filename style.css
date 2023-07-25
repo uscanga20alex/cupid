@@ -210,7 +210,7 @@ footer p {
 
   .group {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
   }
 
@@ -218,3 +218,9 @@ footer p {
     flex: 2;
   }
 }
+@media all and(min-width: 775px){
+  .group {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
