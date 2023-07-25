@@ -212,7 +212,7 @@ footer p {
     flex: 2;
   }
 }
-@media screen and(min-width: 480px) and (max-width: 774px){
+@media screen and (max-width: 774px){
   .group {
     display: flex;
     flex-direction: column;
