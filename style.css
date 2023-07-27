@@ -214,6 +214,7 @@ footer p {
 
   .item-double {
     flex: 2;
+    padding: 10px;
   }
 }
 @media screen and (max-width: 774px){
