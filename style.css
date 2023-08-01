@@ -88,7 +88,7 @@ header nav ul li:last-child a {
 }
 
 /* -------  Join Form ------- */
-.form-group{
+.form-group, .group{
   display: flex;
   flex-direction: column;
   align-items: center;
