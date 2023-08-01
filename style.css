@@ -88,7 +88,7 @@ header nav ul li:last-child a {
 }
 
 /* -------  Join Form ------- */
-.form-group, .group{
+.form-group{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,7 +217,7 @@ footer p {
     padding: 10px;
   }
 }
-@media screen and (max-width: 774px){
+@media screen and (max-width: 480px){
   .group {
     display: flex;
     flex-direction: column;
